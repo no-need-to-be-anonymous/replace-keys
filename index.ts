@@ -36,26 +36,11 @@ function replaceKeys<S extends Record<string, any>, D extends string>(
       obj[value] = object[key];
       delete object[key];
     }
-    console.log("obj", obj);
     return { ...object, ...obj };
   });
 
   return newArray;
 }
 
-const arrayOfObjects = [
-  {
-    name: "Oleg",
-    age: 24,
-  },
-  {
-    name: "Ivan",
-    age: 50,
-  },
-];
-
-type Type = typeof arrayOfObjects;
-
-replaceKeys({ age: "oelg", name: "oleg" }, arrayOfObjects);
 
 module.exports = replaceKeys;
