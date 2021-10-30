@@ -1,0 +1,25 @@
+{
+  "name": "replace-keys",
+  "version": "1.0.0",
+  "description": "It replaces keys of objects in an array of objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no-need-to-be-anonymous/replace-keys.git"
+  },
+  "keywords": [
+    "object",
+    "array",
+    "replace",
+    "keys"
+  ],
+  "author": "no need to be anonymous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no-need-to-be-anonymous/replace-keys/issues"
+  },
+  "homepage": "https://github.com/no-need-to-be-anonymous/replace-keys#readme"
+}
