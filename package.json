@@ -1,6 +1,6 @@
 {
   "name": "replace-keys",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It replaces keys of objects in an array of objects",
   "main": "index.ts",
   "scripts": {
