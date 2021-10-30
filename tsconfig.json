@@ -9,16 +9,18 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
+    "declaration": true,
     // "jsx": "react-jsx",
     "noImplicitAny": true,
     "downlevelIteration": true,
     "removeComments": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "outDir": "/result/index.js"
   },
   "include": ["index.ts"]
   // "exclude": [""]
