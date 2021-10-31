@@ -11,13 +11,14 @@ Helps to replace keys of objects in an array of objects
 Sometimes when we fetch data from an API we get sort of strange keys which doesn't look nice
 when we access those keys while iterating over an array of objects.
 
-First argument of the function takes an object where the keys are those which should be replaced by 
+First argument of the function takes an object where the keys are those which should be replaced by
 new keys and the values are new keys.
 
 Second argument takes an array of objects on which the operation should be done.
 
 ```js
-const replaceKeys = require("replace-keys");
+import {replaceKeys} from "replace-keys";
+
 
 const data = [
   { "1. Category": "fruit", "2. Type": "citrus" },
