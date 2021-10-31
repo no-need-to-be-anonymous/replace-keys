@@ -1,10 +1,12 @@
 {
   "name": "replace-keys",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "It replaces keys of objects in an array of objects",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.6"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }

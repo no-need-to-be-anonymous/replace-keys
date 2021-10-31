@@ -1,4 +1,4 @@
-function replaceKeys<S extends Record<string, any>, D extends string>(
+export  function replaceKeys<S extends Record<string, any>, D extends string>(
   replacementObject: { [Property in keyof S]?: D },
   arrayOfObjects: S[]
 ) {
@@ -43,4 +43,3 @@ function replaceKeys<S extends Record<string, any>, D extends string>(
 }
 
 
-module.exports = replaceKeys;
