@@ -1,17 +1,17 @@
-export  function replaceKeys<S extends Record<string, any>, D extends string>(
-  replacementObject: { [Property in keyof S]?: D },
-  arrayOfObjects: S[]
-) {
+export function replaceKeys<
+  S extends Record<string, any>,
+  D extends string | number
+>(replacementObject: { [Property in keyof S]?: D }, arrayOfObjects: S[]) {
   const replacementsObjectKeys = Object.keys(replacementObject);
   const replacementsObjectValues = Object.values(replacementObject);
   const objectOfArray = Object.keys(arrayOfObjects[0]);
 
   if (arrayOfObjects === undefined) {
     throw new Error(
-      "You didn't provived array of objects (JSON) as a second argument. Please provide array of objects on which keys should be replaced"
+      "You didn't provived array of object as a second argument. Please provide array of objects on which keys should be replaced"
     );
   }
-  if (!Array.isArray(arrayOfObjects) && typeof arrayOfObjects[0] !== "object") {
+  if (!Array.isArray(arrayOfObjects)) {
     throw new Error(
       `Should get array of objects but insead got ${typeof arrayOfObjects}`
     );
@@ -19,14 +19,6 @@ export  function replaceKeys<S extends Record<string, any>, D extends string>(
   if (replacementsObjectKeys.length > objectOfArray.length) {
     throw new Error(
       `In replacement object you specified ${replacementsObjectKeys.length} keys, but in array of objects the object has ${objectOfArray.length} keys. Both should be equal`
-    );
-  }
-  if (!replacementsObjectKeys.every((key) => typeof key === "string")) {
-    throw new Error("All keys in replacement object should be of type string");
-  }
-  if (!replacementsObjectValues.every((key) => typeof key === "string")) {
-    throw new Error(
-      "All values in replacement object should be of type string"
     );
   }
 
@@ -41,5 +33,3 @@ export  function replaceKeys<S extends Record<string, any>, D extends string>(
 
   return newArray;
 }
-
-
